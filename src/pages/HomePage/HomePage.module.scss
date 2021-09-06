@@ -1,0 +1,142 @@
+@import "../../mixins";
+
+.home-page {
+  height: 100%;
+}
+
+.block {
+  box-shadow: rgb(149 157 165 / 80%) 0px -5px 20px 0px;
+}
+
+.title-block {
+  .title-description {
+    align-self: center;
+
+    .subtitle {
+      span {
+        //display: block;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        &:before {
+          content: "▸";
+          padding-left: 0.5em;
+          padding-right: 0.3em;
+        }
+
+        a {
+          color: #0b3a7f;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .title-photo {
+    display: flex;
+    place-content: center;
+
+    img {
+      border-radius: 50%;
+      background-size: cover;
+
+      width: 70%;
+      margin-bottom: 1.5em;
+      @include media("min", "md") {
+        width: 90%;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.about-me-block {
+  .description {
+    font-size: 1.25em;
+  }
+}
+
+.block-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1em;
+
+  h3 {
+    padding: 0 0.5em;
+    @include media("min", "md") {
+      padding: 0 1.5em;
+    }
+  }
+
+  &:before,
+  &:after{
+    content: '';
+    display: block; /*IE 10,11 fix */
+    flex: 1 0 auto;
+    height: 1px;
+    background: #9d9d9d;
+  }
+}
+
+.block-background-gray {
+  background-color: #e9e9e9;
+}
+
+.block-background-light-gray {
+  background-color: #f6f6f6;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.text-underline-thick {
+  text-decoration: underline 0;
+}
+
+.code-block {
+  font-family: JetBrains Mono, monospace;
+  padding:  0.5em 0.5em 1em;
+  @include media("min", "md") {
+    padding: 0 2em;
+  }
+
+  font-size: 0.8em;
+  @include media("min", "md") {
+    font-size: 1em;
+  }
+
+  .tab1 {
+    padding-left: 1em;
+    @include media("min", "md") {
+      padding-left: 2em;
+    }
+  }
+
+  .tab2 {
+    padding-left: 2em;
+    @include media("min", "md") {
+      padding-left: 4em;
+    }
+  }
+
+  .field-name {
+    font-weight: 600;
+    color: #235232;
+  }
+
+  .field-val {
+    font-weight: 600;
+    color: #182e69;
+  }
+}

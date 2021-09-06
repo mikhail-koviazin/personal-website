@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "module": "ESNext",
+        "target": "es2017",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": false,
+        "types": ["node", "webpack-env"],
+        "lib": ["ESNext", "dom"],
+    },
+    "include": [
+        "./src/**/*",
+        "types"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules",
+        "publish"
+    ]
+}

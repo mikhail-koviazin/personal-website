@@ -1,0 +1,15 @@
+.work-type-example {
+  .learn-more {
+    //&::before {
+    //  content: "(";
+    //}
+    //&::after {
+    //  content: ")";
+    //}
+    font-weight: 500;
+  }
+
+  span {
+    font-weight: 500;
+  }
+}
